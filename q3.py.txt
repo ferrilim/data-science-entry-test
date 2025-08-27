@@ -1,0 +1,28 @@
+def update_dictionary(dct, key, value):
+    """
+    Updates a dictionary with a new key-value pair.
+    If the key already exists, print the original value before updating.
+    Returns the updated dictionary.
+    """
+    if not isinstance(dct, dict):
+        return -1  # Optional: Handle if dct is not a dictionary
+
+    if key in dct:
+        print("Original value:", dct[key])
+
+    dct[key] = value
+    return dct
+
+# Test case 1
+result1 = update_dictionary({}, "name", "Alice")
+print("Result 1:", result1)  # Expected: {'name': 'Alice'}
+
+# Test case 2
+result2 = update_dictionary({"age": 25}, "age", 26)
+print("Result 2:", result2)
+
+"""
+Result 1: {'name': 'Alice'}
+Original value: 25
+Result 2: {'age': 26}
+"""

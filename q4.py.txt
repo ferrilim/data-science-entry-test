@@ -1,0 +1,15 @@
+def string_reverse(s):
+    if not isinstance(s, str):
+        return -1
+
+    if len(s) <= 1:
+        return s
+    return string_reverse(s[1:]) + s[0]
+    
+print("Result 1:", string_reverse("Hello World"))  # "dlroW olleH"
+print("Result 2:", string_reverse("Python"))       # "nohtyP"
+
+"""
+Result 1: dlroW olleH
+Result 2: nohtyP
+"""

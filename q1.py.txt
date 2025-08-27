@@ -1,0 +1,18 @@
+def swap(x, y):
+    if not (isinstance(x, int) and isinstance(y, int)):
+        print("Result 1: -1 (Non-numeric input)")
+        return -1
+    else:
+        x, y = y, x
+        print("Swapped values:", x, y)
+
+# Call the function
+swap("Apple", 10)
+swap(9,17)
+
+
+#Result 
+"""
+Result 1: -1 (Non-numeric input)
+Swapped values: 17 9
+"""

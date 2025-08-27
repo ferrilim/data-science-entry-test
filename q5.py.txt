@@ -1,0 +1,20 @@
+def check_divisibility(num, divisor):
+    if not isinstance(num, (int, float)):
+        print("Error: 'num' must be numeric.")
+        return -1
+    if not isinstance(divisor, (int, float)):
+        print("Error: 'divisor' must be numeric.")
+        return -1
+    if divisor == 0:
+        print("Error: Cannot divide by zero.")
+        return -1
+
+    return num % divisor == 0
+    
+print("Result 1:", check_divisibility(10, 2))  # True
+print("Result 2:", check_divisibility(7, 3))   # False
+
+"""
+Result 1: True
+Result 2: False
+""'

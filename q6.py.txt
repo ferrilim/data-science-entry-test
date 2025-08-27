@@ -1,0 +1,22 @@
+def find_first_negative(lst):
+    if not lst:
+        return "No negatives"  # or return -1 to indicate no data
+
+    i = 0
+    while i < len(lst):
+        try:
+            if lst[i] < 0:
+                return lst[i]
+        except TypeError:
+            pass  # Skip non-numeric values
+        i += 1
+
+    return "No negatives"
+    
+print("Result 1:", find_first_negative([3, 5, -1, 7, -2, 8]))  # → -1
+print("Result 2:", find_first_negative([2, 10, 7, 0]))         # → "No negatives"
+
+"""
+Result 1: -1
+Result 2: No negatives
+"""
